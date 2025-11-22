@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz sugli Stili di Apprendimento</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  .container {
+    max-width: 800px;
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #6b21a8;
+  }
+  h2 {
+    color: #2563eb;
+  }
+  .question {
+    margin-bottom: 25px;
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  button {
+    background-color: #9333ea;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    transition: 0.3s;
+  }
+  button:hover {
+    background-color: #7e22ce;
+    transform: scale(1.05);
+  }
+  #risultato {
+    text-align: center;
+    padding: 20px;
+    background: #ecfdf5;
+    border-radius: 15px;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  .profilo {
+    font-weight: bold;
+    color: #065f46;
+    margin-top: 10px;
+  }
+  .letter-count {
+    margin-top: 10px;
+    color: #374151;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🧠 Quiz sugli Stili di Apprendimento</h1>
+
+  <form id="quizForm">
+    <!-- Domande -->
+    <div class="question">
+      <h2>1. Cosa ti piace di più delle passeggiate nella natura?</h2>
+      <label><input type="radio" name="q1" value="A"> a) Osservare i colori, le forme e i dettagli degli alberi e dei fiori</label><br>
+      <label><input type="radio" name="q1" value="B"> b) Ascoltare i suoni degli uccelli e il rumore del vento</label><br>
+      <label><input type="radio" name="q1" value="C"> c) Sentire il contatto con la terra, camminare e muoverti liberamente</label><br>
+      <label><input type="radio" name="q1" value="D"> d) Parlare con gli amici durante la passeggiata</label>
+    </div>
+
+    <div class="question">
+      <h2>2. Cosa ricordi meglio delle persone che hai appena incontrato?</h2>
+      <label><input type="radio" name="q2" value="A"> a) Il loro aspetto o il sorriso</label><br>
+      <label><input type="radio" name="q2" value="B"> b) La loro voce o le parole che usano</label><br>
+      <label><input type="radio" name="q2" value="C"> c) Il loro modo di muoversi o la stretta di mano</label><br>
+      <label><input type="radio" name="q2" value="D"> d) Le emozioni che ti hanno trasmesso</label>
+    </div>
+
+    <div class="question">
+      <h2>3. Quando studi, cosa ti aiuta di più a ricordare le informazioni?</h2>
+      <label><input type="radio" name="q3" value="A"> a) Guardare grafici, schemi o immagini</label><br>
+      <label><input type="radio" name="q3" value="B"> b) Ripetere a voce alta o ascoltare spiegazioni</label><br>
+      <label><input type="radio" name="q3" value="C"> c) Scrivere appunti a mano o fare esercizi pratici</label><br>
+      <label><input type="radio" name="q3" value="D"> d) Muoverti o camminare mentre ripeti</label>
+    </div>
+
+    <div class="question">
+      <h2>4. Se devi imparare una nuova attività, cosa preferisci fare?</h2>
+      <label><input type="radio" name="q4" value="A"> a) Guardare una dimostrazione o un video</label><br>
+      <label><input type="radio" name="q4" value="B"> b) Ascoltare una spiegazione passo per passo</label><br>
+      <label><input type="radio" name="q4" value="C"> c) Provare subito a fare l’attività</label><br>
+      <label><input type="radio" name="q4" value="D"> d) Parlare con qualcuno che ti guida</label>
+    </div>
+
+    <div class="question">
+      <h2>5. Come preferisci ricevere istruzioni?</h2>
+      <label><input type="radio" name="q5" value="A"> a) Con immagini, mappe o diagrammi</label><br>
+      <label><input type="radio" name="q5" value="B"> b) Attraverso spiegazioni verbali</label><br>
+      <label><input type="radio" name="q5" value="C"> c) Facendo pratica direttamente</label><br>
+      <label><input type="radio" name="q5" value="D"> d) Discutendo e confrontandoti con altri</label>
+    </div>
+
+    <div class="question">
+      <h2>6. Quando devi ricordare un nuovo concetto, come ti viene più naturale?</h2>
+      <label><input type="radio" name="q6" value="A"> a) Visualizzare immagini o schemi</label><br>
+      <label><input type="radio" name="q6" value="B"> b) Ripetere o ascoltare le parole nella tua mente</label><br>
+      <label><input type="radio" name="q6" value="C"> c) Ricordare cosa hai fatto durante l’apprendimento</label><br>
+      <label><input type="radio" name="q6" value="D"> d) Ricordare il contesto o la persona con cui ne hai parlato</label>
+    </div>
+
+    <div class="question">
+      <h2>7. Quale di questi ambienti ti aiuterebbe a studiare meglio?</h2>
+      <label><input type="radio" name="q7" value="A"> a) Una stanza tranquilla e ordinata</label><br>
+      <label><input type="radio" name="q7" value="B"> b) Uno spazio dove poter scambiare idee con altri</label><br>
+      <label><input type="radio" name="q7" value="C"> c) Un posto all'aperto dove posso muovermi</label><br>
+      <label><input type="radio" name="q7" value="D"> d) Una biblioteca o aula con altre persone</label>
+    </div>
+
+    <div class="question">
+      <h2>8. Quale metodo usi per montare i mobili IKEA?</h2>
+      <label><input type="radio" name="q8" value="A"> a) Leggo le istruzioni passo dopo passo</label><br>
+      <label><input type="radio" name="q8" value="B"> b) Immagino come dovrebbe apparire e inizio subito</label><br>
+      <label><input type="radio" name="q8" value="C"> c) Seguo un video di istruzioni online</label><br>
+      <label><input type="radio" name="q8" value="D"> d) Chiedo a qualcuno e lo facciamo insieme</label>
+    </div>
+
+    <div class="question">
+      <h2>9. Se dovessi imparare una coreografia o fare yoga da un video su YouTube, come procederesti?</h2>
+      <label><input type="radio" name="q9" value="A"> a) Guarderei più volte mettendo in pausa per copiare i movimenti</label><br>
+      <label><input type="radio" name="q9" value="B"> b) Guarderei una volta e poi rifarei i movimenti</label><br>
+      <label><input type="radio" name="q9" value="C"> c) Mi concentrerei sulle istruzioni verbali</label><br>
+      <label><input type="radio" name="q9" value="D"> d) Preferirei praticare insieme ad altri</label>
+    </div>
+
+    <button type="button" onclick="calcola()">✨ Vedi il tuo risultato!</button>
+  </form>
+
+  <div id="risultato"></div>
+</div>
+
+<script>
+function calcola() {
+  const risposte = {A:0, B:0, C:0, D:0};
+  const form = document.forms['quizForm'];
+  for (let i = 0; i < form.elements.length; i++) {
+    const el = form.elements[i];
+    if (el.checked) risposte[el.value]++;
+  }
+
+  let max = Math.max(...Object.values(risposte));
+  let lettera = Object.keys(risposte).find(k => risposte[k] === max);
+
+  const descrizioni = {
+    A: "🟣 <b>Visivo</b> – Impari meglio osservando immagini, colori, grafici e video. Ti aiutano mappe, schemi e sottolineature colorate.",
+    B: "🟢 <b>Uditivo</b> – Impari meglio ascoltando e parlando. Ti aiutano spiegazioni orali, podcast o discussioni.",
+    C: "🟠 <b>Cinestetico</b> – Impari meglio facendo, muovendoti e sperimentando. Ti aiutano attività pratiche e laboratori.",
+    D: "🔵 <b>Sociale</b> – Impari meglio collaborando e confrontandoti con gli altri. Ti aiutano i lavori di gruppo e lo scambio di idee."
+  };
+
+  document.getElementById('risultato').innerHTML = `
+    <div class="letter-count">🅰️ ${risposte.A} | 🅱️ ${risposte.B} | 🅲️ ${risposte.C} | 🅳️ ${risposte.D}</div>
+    <div class="profilo">${descrizioni[lettera]}</div>
+  `;
+}
+</script>
+
+</body>
+</html>
